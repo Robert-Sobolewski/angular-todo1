@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
 // import { MaterialModule } from '@angular/material';
 const routes: Routes = [{
   path: '',
@@ -14,7 +15,8 @@ const routes: Routes = [{
 @NgModule({
   declarations: [
     TodosComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,
