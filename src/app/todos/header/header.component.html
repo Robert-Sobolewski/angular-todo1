@@ -1,0 +1,11 @@
+<header class="header">
+  <h1>Todos</h1>
+  <!-- <input class="new-todo" placeholder="What needs to be done?" type="text" name="" id="" autoFocus /> -->
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>What needs to be done?</mat-label>
+    <input type="text" matInput autoFocus [(ngModel)]="value"
+    (keyup)="changeText($event)"
+    (keyup.enter)="addTodo()"
+    />
+  </mat-form-field>
+</header>
