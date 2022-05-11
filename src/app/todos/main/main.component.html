@@ -1,2 +1,21 @@
-<p>main works!</p>
-=={{visibleTodos$| async | json }}
+<mat-selection-list class="todo-list">
+  <app-todo *ngFor="let todo of visibleTodos$ | async" [todo]="todo"></app-todo>
+
+</mat-selection-list>
+
+
+<!-- <ul class="todo-list">
+  <li *ngFor="let todo of visibleTodos$ | async">
+    {{todo.text}}
+  </li>
+</ul> -->
+<!-- material ui -->
+<mat-selection-list class="todo-list">
+  <app-todo *ngFor="let todo of visibleTodos$ | async" [todo]="todo"></app-todo>
+
+  <!-- <mat-list-option *ngFor="let todo of visibleTodos$ | async">
+    {{todo.text}}
+  </mat-list-option> -->
+</mat-selection-list>
+<!-- =={{visibleTodos$| async | json }} -->
+

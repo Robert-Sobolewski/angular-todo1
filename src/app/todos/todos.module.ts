@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
+import {MatListModule} from '@angular/material/list';
+import { TodoComponent } from './todo/todo.component';
 // import { MaterialModule } from '@angular/material';
 const routes: Routes = [{
   path: '',
@@ -16,12 +18,13 @@ const routes: Routes = [{
   declarations: [
     TodosComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    TodoComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    // MaterialModule,
+    MatListModule,
     MatInputModule,
     RouterModule.forChild(routes)
   ]

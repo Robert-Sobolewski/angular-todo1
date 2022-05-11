@@ -17,8 +17,14 @@ export class MainComponent implements OnInit {
       this.todosService.todos$,
       this.todosService.filter$)
       .pipe(map(([todos,filter]:[TodoInterface[], FilterEnum])=>{
-        console.log('combine',todos,filter)
-        return []
+
+        if(filter === FilterEnum.ACTIVE){
+          return todos.filter(todo =>!todo.isCompleted)
+        }
+        else if(filter === FilterEnum.COMPLETED){
+          return todos.filter(todo =>todo.isCompleted)
+        }
+        return todos
       }))
   }
 
